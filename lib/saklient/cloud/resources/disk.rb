@@ -325,7 +325,7 @@ module Saklient
         #
         # @param [Fixnum] timeoutSec
         # @return [bool] 成功時はtrue, タイムアウトやエラーによる失敗時はfalseを返します.
-        def sleep_while_copying(timeoutSec = 3600)
+        def sleep_while_copying(timeoutSec = 10800)
           Saklient::Util::validate_type(timeoutSec, 'Fixnum')
           step = 10
           while 0 < timeoutSec do
