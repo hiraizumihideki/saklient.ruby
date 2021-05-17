@@ -290,7 +290,7 @@ module Saklient
             end
           end
           if !(disk).nil?
-            disk.sleep_while_copying
+            disk.sleep_while_copying(10800)
             if !skipConfig
               diskconf = disk.create_config
               diskconf.host_name = hostName
